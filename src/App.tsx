@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter';
+
+let student:string = 'Johny Depp';
+let age:number=55;
+let isSmart:boolean=true;
+
+let students:string[] = ['Rashed','Zaman','Raju'];
+let fees:number[] = [12,13,14,15];
+
+
+interface Person{name:string,age:number,married?:boolean, locattion?:string | number}
+
+const person:Person = {
+  name:'X',
+  age:18,
+  // married:false,
+  locattion:55
+}
+
+const handleScripts=(name:string,number:number,address:string):void=>{
+  const total:number=50;
+console.log(name,address,number)
+// return total;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter></Counter>
     </div>
   );
 }
